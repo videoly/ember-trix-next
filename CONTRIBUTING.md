@@ -3,7 +3,7 @@
 ## Installation
 
 * `git clone <repository-url>`
-* `cd ember-ya-trix`
+* `cd ember-trix-next`
 * `npm install`
 
 ## Linting

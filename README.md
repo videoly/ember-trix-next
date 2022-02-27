@@ -1,4 +1,4 @@
-ember-ya-trix
+ember-trix-next
 ==============================================================================
 
 [Short description of the addon.]
@@ -16,7 +16,7 @@ Installation
 ------------------------------------------------------------------------------
 
 ```
-ember install ember-ya-trix
+ember install ember-trix-next
 ```
 
 

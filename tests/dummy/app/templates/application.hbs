@@ -1,5 +1,45 @@
 {{page-title "Dummy"}}
 
-<h2 id="title">Welcome to Ember</h2>
+<TrixEditor
+    @trixChange={{this.trixChange}}
+    @initialValue={{this._text}} />
+
+<br>
+<br>
+
+<TrixEditor
+    @trixChange={{this.trixChange}}
+    @initialValue={{this._text}}
+    as |trix|>
+    <trix.toolbar @buttons={{this.buttons}} />
+    <trix.editor/>
+</TrixEditor>
+
+<br>
+<br>
+
+<TrixEditor
+    @trixChange={{this.trixChange}}
+    @initialValue={{this._text}}
+    as |trix|>
+    <trix.toolbar />
+    <trix.editor/>
+</TrixEditor>
+
+<br>
+<br>
+
+<TrixEditor
+    @trixChange={{this.trixChange}}
+    @initialValue={{this._text}}
+    as |trix|>
+    <trix.toolbar @default={{true}} />
+    <trix.editor />
+</TrixEditor>
+
+
+<pre class="preview">
+    {{this._html}}
+</pre>
 
 {{outlet}}

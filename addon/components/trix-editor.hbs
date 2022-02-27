@@ -1,0 +1,34 @@
+{{#if (has-block)}}
+    {{yield (hash
+        toolbar=(component this.toolbarComponent toolbarId=this.toolbarId)
+        editor=(component this.editorComponent
+            initialValue=@initialValue
+            toolbarId=this.toolbarId
+            inputId=this.inputId
+            trixInitialize=this.trixInitialize
+            trixChange=this.trixChange
+            trixPaste=this.trixPaste
+            trixSelectionChange=this.trixSelectionChange
+            trixFocus=this.trixFocus
+            trixBlur=this.trixBlur
+            trixFileAccept=this.trixFileAccept
+            trixAttachmentAdd=this.trixAttachmentAdd
+            trixAttachmentRemove=this.trixAttachmentRemove
+        )
+    )}}
+{{else}}
+    <input id="{{this.inputId}}" value="{{@initialValue}}" type="hidden" />
+    <trix-editor
+         ...attributes
+        input="{{this.inputId}}"
+        {{on 'trix-initialize' this.trixInitialize}}
+        {{on 'trix-change' this.trixChange}}
+        {{on 'trix-paste' this.trixPaste}}
+        {{on 'trix-selection-change' this.trixSelectionChange}}
+        {{on 'trix-focus' this.trixFocus}}
+        {{on 'trix-blur' this.trixBlur}}
+        {{on 'trix-file-accept' this.trixFileAccept}}
+        {{on 'trix-attachment-add' this.trixAttachmentAdd}}
+        {{on 'trix-attachment-remove' this.trixAttachmentRemove}}
+    />
+{{/if}}

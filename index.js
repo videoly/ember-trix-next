@@ -2,4 +2,10 @@
 
 module.exports = {
   name: require('./package').name,
+  included() {
+    this._super.included.apply(this, arguments);
+    this.import('node_modules/trix/dist/trix.css');
+    this.import('node_modules/trix/dist/trix.umd.js');
+    this.import('vendor/shims/trix.js');
+  },
 };
