@@ -1,23 +1,23 @@
 {{#if @default}}
-    <trix-toolbar id="{{@toolbarId}}" ...attributes />
+  <trix-toolbar id="{{@toolbarId}}" ...attributes />
 {{else}}
-    <trix-toolbar id="{{@toolbarId}}" ...attributes>
-        {{#each this.toolbarButtonsData as |_button|}}
-            <button
-                type="button"
-                class="ya-trix-button ya-trix-button--{{_button.id}}"
-                data-trix-attribute={{if (equal _button.type 'attribute') _button.id null}}
-                data-trix-action={{if (equal _button.type 'action') _button.id null}}
-                data-trix-key="{{_button.key}}"
-                title="{{_button.title}}"
-            >
-                {{_button.title}}
-            </button>
-        {{/each}}
+  <trix-toolbar id="{{@toolbarId}}" ...attributes>
+    {{#each this.toolbarButtonsData as |_button|}}
+      <button
+        type="button"
+        class="ya-trix-button ya-trix-button--{{_button.id}}"
+        data-trix-attribute={{if (equal _button.type 'attribute') _button.id null}}
+        data-trix-action={{if (equal _button.type 'action') _button.id null}}
+        data-trix-key="{{_button.key}}"
+        title="{{_button.title}}"
+      >
+        {{_button.title}}
+      </button>
+    {{/each}}
 
-        {{yield}}
+    {{yield}}
 
-        <div class="trix-dialogs" data-trix-dialogs=""></div>
-    </trix-toolbar>
+    <div class="trix-dialogs" data-trix-dialogs=""></div>
+  </trix-toolbar>
 {{/if}}
 
