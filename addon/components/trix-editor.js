@@ -1,5 +1,4 @@
 import Component from '@glimmer/component';
-import { action } from '@ember/object';
 
 export default class TrixEditorComponent extends Component {
   toolbarComponent = 'trix-editor/toolbar';

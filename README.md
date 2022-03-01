@@ -1,7 +1,7 @@
 ember-trix-next
 ==============================================================================
 
-[Short description of the addon.]
+A simple trix editor wrapper
 
 
 Compatibility
@@ -23,7 +23,23 @@ ember install ember-trix-next
 Usage
 ------------------------------------------------------------------------------
 
-[Longer description of how to use the addon in apps.]
+In the most cases it would be enough just to use the inline variant of the component:
+
+```
+<TrixEditor @initialValue="some text" />
+```
+
+Or you can customize the markup:
+
+```
+<TrixEditor as |trix|>
+  <p>Some HTML before toolbar</p>
+  <trix.toolbar />
+  <p>Some HTML between toolbar and editor</p>
+  <trix.editor @initialValue="some text" />
+  <p>Some HTML after editor</p>
+</TrixEditor>
+```
 
 
 Contributing

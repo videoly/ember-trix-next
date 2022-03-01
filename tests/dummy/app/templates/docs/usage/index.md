@@ -1,6 +1,6 @@
 # Quickstart
 
-In most cases it would be enough just to use the inline variant of the component:
+In the most cases it would be enough just to use the inline variant of the component:
 
 {{#docs-demo as |demo|}}
   {{#demo.example name="trix-simple.hbs"}}
