@@ -13,14 +13,5 @@ module('Integration | Component | trix-editor/editor', function (hooks) {
     await render(hbs`<TrixEditor::Editor />`);
 
     assert.dom(this.element).hasText('');
-
-    // Template block usage:
-    await render(hbs`
-      <TrixEditor::Editor>
-        template block text
-      </TrixEditor::Editor>
-    `);
-
-    assert.dom(this.element).hasText('template block text');
   });
 });

@@ -1,17 +1,18 @@
-<input id="{{@inputId}}" value="{{@initialValue}}" type="hidden" />
+<input id="{{@inputId}}" value="{{@initialValue}}" type="hidden" data-trix-input />
 <trix-editor
-  ...attributes
+  data-trix-editor
   toolbar="{{@toolbarId}}"
   input="{{@inputId}}"
-  {{on 'trix-initialize' @trixInitialize}}
-  {{on 'trix-change' @trixChange}}
-  {{on 'trix-paste' @trixPaste}}
-  {{on 'trix-selection-change' @trixSelectionChange}}
-  {{on 'trix-focus' @trixFocus}}
-  {{on 'trix-blur' @trixBlur}}
-  {{on 'trix-file-accept' @trixFileAccept}}
-  {{on 'trix-attachment-add' @trixAttachmentAdd}}
-  {{on 'trix-attachment-remove' @trixAttachmentRemove}}
+  {{on 'trix-initialize' (or @trixInitialize @noop)}}
+  {{on 'trix-change' (or @trixChange @noop)}}
+  {{on 'trix-paste' (or @trixPaste @noop)}}
+  {{on 'trix-selection-change' (or @trixSelectionChange @noop)}}
+  {{on 'trix-focus' (or @trixFocus @noop)}}
+  {{on 'trix-blur' (or @trixBlur @noop)}}
+  {{on 'trix-file-accept' (or @trixFileAccept @noop)}}
+  {{on 'trix-attachment-add' (or @trixAttachmentAdd @noop)}}
+  {{on 'trix-attachment-remove' (or @trixAttachmentRemove @noop)}}
+  ...attributes
 />
 
 {{yield}}

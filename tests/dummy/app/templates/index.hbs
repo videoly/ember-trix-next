@@ -1,0 +1,13 @@
+{{docs-hero}}
+
+<div style="max-width: 40rem; margin: 0 auto; padding: 0 1.5rem">
+  <DocsDemo as |demo|>
+    <demo.example @name="trix-simple.hbs">
+<TrixEditor
+    @trixChange={{this.trixChange}}
+    @initialValue="some text" />
+    </demo.example>
+  </DocsDemo>
+</div>
+
+{{outlet}}

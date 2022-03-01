@@ -2,33 +2,25 @@
   {{yield (hash
     toolbar=(component this.toolbarComponent toolbarId=this.toolbarId)
     editor=(component this.editorComponent
-      initialValue=@initialValue
       toolbarId=this.toolbarId
       inputId=this.inputId
-      trixInitialize=this.trixInitialize
-      trixChange=this.trixChange
-      trixPaste=this.trixPaste
-      trixSelectionChange=this.trixSelectionChange
-      trixFocus=this.trixFocus
-      trixBlur=this.trixBlur
-      trixFileAccept=this.trixFileAccept
-      trixAttachmentAdd=this.trixAttachmentAdd
-      trixAttachmentRemove=this.trixAttachmentRemove
+      noop=this.noop
     )
   )}}
 {{else}}
-  <input id="{{this.inputId}}" value="{{@initialValue}}" type="hidden" />
+  <input id="{{this.inputId}}" value="{{@initialValue}}" type="hidden" data-trix-input />
   <trix-editor
-     ...attributes
+    data-trix-editor
     input="{{this.inputId}}"
-    {{on 'trix-initialize' this.trixInitialize}}
-    {{on 'trix-change' this.trixChange}}
-    {{on 'trix-paste' this.trixPaste}}
-    {{on 'trix-selection-change' this.trixSelectionChange}}
-    {{on 'trix-focus' this.trixFocus}}
-    {{on 'trix-blur' this.trixBlur}}
-    {{on 'trix-file-accept' this.trixFileAccept}}
-    {{on 'trix-attachment-add' this.trixAttachmentAdd}}
-    {{on 'trix-attachment-remove' this.trixAttachmentRemove}}
+    {{on 'trix-initialize' (or @trixInitialize this.noop)}}
+    {{on 'trix-change' (or @trixChange this.noop)}}
+    {{on 'trix-paste' (or @trixPaste this.noop)}}
+    {{on 'trix-selection-change' (or @trixSelectionChange this.noop)}}
+    {{on 'trix-focus' (or @trixFocus this.noop)}}
+    {{on 'trix-blur' (or @trixBlur this.noop)}}
+    {{on 'trix-file-accept' (or @trixFileAccept this.noop)}}
+    {{on 'trix-attachment-add' (or @trixAttachmentAdd this.noop)}}
+    {{on 'trix-attachment-remove' (or @trixAttachmentRemove this.noop)}}
+    ...attributes
   />
 {{/if}}

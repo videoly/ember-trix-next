@@ -100,10 +100,14 @@ const buttons = {
 export default class TrixEditorToolbarComponent extends Component {
   buttons = BUTTONS;
 
+  get isDefault() {
+    return this.args.default ?? true;
+  }
+
   constructor() {
     super(...arguments);
 
-    if (this.args.default) {
+    if (this.isDefault) {
       Trix.config.toolbar.getDefaultHTML = getDefaultHTML;
     } else {
       Trix.config.toolbar.getDefaultHTML = () => null;

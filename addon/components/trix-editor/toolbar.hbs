@@ -1,11 +1,20 @@
-{{#if @default}}
-  <trix-toolbar id="{{@toolbarId}}" ...attributes />
+{{#if this.isDefault}}
+  <trix-toolbar
+    data-trix-toolbar
+    data-trix-toolbar-default
+    id="{{@toolbarId}}"
+    ...attributes />
 {{else}}
-  <trix-toolbar id="{{@toolbarId}}" ...attributes>
+  <trix-toolbar
+    data-trix-toolbar
+    data-trix-toolbar-custom
+    id="{{@toolbarId}}"
+    ...attributes>
     {{#each this.toolbarButtonsData as |_button|}}
       <button
+        data-trix-toolbar-button
         type="button"
-        class="ya-trix-button ya-trix-button--{{_button.id}}"
+        class="trix-next-button trix-next-button--{{_button.id}}"
         data-trix-attribute={{if (equal _button.type 'attribute') _button.id null}}
         data-trix-action={{if (equal _button.type 'action') _button.id null}}
         data-trix-key="{{_button.key}}"
