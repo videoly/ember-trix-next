@@ -114,6 +114,10 @@ export default class TrixEditorToolbarComponent extends Component {
     }
   }
 
+  teardown() {
+    Trix.config.toolbar.getDefaultHTML = getDefaultHTML;
+  }
+
   get toolbarButtons() {
     return this.args.buttons ?? this.buttons;
   }

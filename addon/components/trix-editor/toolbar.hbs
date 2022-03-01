@@ -3,12 +3,14 @@
     data-trix-toolbar
     data-trix-toolbar-default
     id="{{@toolbarId}}"
+    {{will-destroy this.teardown}}
     ...attributes />
 {{else}}
   <trix-toolbar
     data-trix-toolbar
     data-trix-toolbar-custom
     id="{{@toolbarId}}"
+    {{will-destroy this.teardown}}
     ...attributes>
     {{#each this.toolbarButtonsData as |_button|}}
       <button
