@@ -4,7 +4,7 @@ module.exports = function (environment) {
   let ENV = {
     modulePrefix: 'dummy',
     environment,
-    rootURL: '/ember-trix-next/',
+    rootURL: '/',
     locationType: 'history',
     EmberENV: {
       FEATURES: {
@@ -45,7 +45,7 @@ module.exports = function (environment) {
 
   if (environment === 'production') {
     // Allow ember-cli-addon-docs to update the rootURL in compiled assets
-    ENV.rootURL = '/ADDON_DOCS_ROOT_URL/';
+    ENV.rootURL = '/ember-trix-next/';
     // here you can enable a production-specific feature
   }
 
