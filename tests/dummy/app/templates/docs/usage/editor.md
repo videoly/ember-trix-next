@@ -14,43 +14,23 @@ trixAttachmentAdd
 trixAttachmentRemove
 ```
 
-
-
-
-{{#docs-snippet name="editor-events.hbs"}}
-  <TrixEditor
-    @initialValue="some text"
-    as |trix|>
-    <trix.toolbar />
-    <trix.editor
-      @trixInitialize={{this.trixInitialize}}
-      @trixChange={{this.trixChange}}
-      @trixPaste={{this.trixPaste}}
-      @trixSelectionChange={{this.trixSelectionChange}}
-      @trixFocus={{this.trixFocus}}
-      @trixBlur={{this.trixBlur}}
-      @trixFileAccept={{this.trixFileAccept}}
-      @trixAttachmentAdd={{this.trixAttachmentAdd}}
-      @trixAttachmentRemove={{this.trixAttachmentRemove}}
-    />
-  </TrixEditor>
-{{/docs-snippet}}
-
-<br/>
-
-<TrixEditor
-  @initialValue="some text"
-  as |trix|>
-  <trix.toolbar />
-  <trix.editor
-    @trixInitialize={{this.trixInitialize}}
-    @trixChange={{this.trixChange}}
-    @trixPaste={{this.trixPaste}}
-    @trixSelectionChange={{this.trixSelectionChange}}
-    @trixFocus={{this.trixFocus}}
-    @trixBlur={{this.trixBlur}}
-    @trixFileAccept={{this.trixFileAccept}}
-    @trixAttachmentAdd={{this.trixAttachmentAdd}}
-    @trixAttachmentRemove={{this.trixAttachmentRemove}}
-  />
-</TrixEditor>
+{{#docs-demo as |demo|}}
+  {{#demo.example name="editor-events.hbs"}}
+    <TrixEditor as |trix|>
+      <trix.toolbar />
+      <trix.editor
+        @initialValue="some text"
+        @trixInitialize={{this.trixInitialize}}
+        @trixChange={{this.trixChange}}
+        @trixPaste={{this.trixPaste}}
+        @trixSelectionChange={{this.trixSelectionChange}}
+        @trixFocus={{this.trixFocus}}
+        @trixBlur={{this.trixBlur}}
+        @trixFileAccept={{this.trixFileAccept}}
+        @trixAttachmentAdd={{this.trixAttachmentAdd}}
+        @trixAttachmentRemove={{this.trixAttachmentRemove}}
+      />
+    </TrixEditor>
+  {{/demo.example}}
+  {{demo.snippet "editor-events.hbs"}}
+{{/docs-demo}}

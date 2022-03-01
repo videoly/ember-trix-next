@@ -30,22 +30,14 @@ The list of available buttons is
 ]
 ```
 
-{{#docs-snippet name="toolbar-custom-buttons.hbs"}}
-  <!-- this.customButtons = ['bold', 'italic', 'strike', 'heading1', 'quote'] -->
+{{#docs-demo as |demo|}}
+  {{#demo.example name="toolbar-custom-buttons.hbs"}}
+    <!-- this.customButtons = ['bold', 'italic', 'strike', 'heading1', 'quote'] -->
 
-  <TrixEditor
-    @initialValue="some text"
-    as |trix|>
-    <trix.toolbar @default={{false}} @buttons={{this.customButtons}} />
-    <trix.editor />
-  </TrixEditor>
-{{/docs-snippet}}
-
-<br/>
-
-<TrixEditor
-  @initialValue="some text"
-  as |trix|>
-  <trix.toolbar @default={{false}} @buttons={{this.customButtons}} />
-  <trix.editor />
-</TrixEditor>
+    <TrixEditor as |trix|>
+      <trix.toolbar @default={{false}} @buttons={{this.customButtons}} />
+      <trix.editor @initialValue="some text" />
+    </TrixEditor>
+  {{/demo.example}}
+  {{demo.snippet "toolbar-custom-buttons.hbs"}}
+{{/docs-demo}}

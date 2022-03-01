@@ -1,13 +1,21 @@
 {
   "name": "ember-trix-next",
-  "version": "1.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "1.0.1",
+  "description": "A simple trix editor wrapper",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "library wrapper",
+    "editor",
+    "trix",
+    "trix wrapper",
+    "wisiwig"
   ],
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://github.com/videoly/ember-trix-next.git"
+  },
   "license": "MIT",
-  "author": "",
+  "author": "videoly",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -82,7 +90,8 @@
     "edition": "octane"
   },
   "ember-addon": {
-    "configPath": "tests/dummy/config"
+    "configPath": "tests/dummy/config",
+    "demoURL": "https://videoly.github.io/ember-trix-next"
   },
   "homepage": "https://videoly.github.io/ember-trix-next"
 }

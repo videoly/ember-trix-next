@@ -3,9 +3,7 @@
 <div style="max-width: 50rem; margin: 0 auto; padding: 0 1.5rem">
   {{#docs-demo as |demo|}}
     {{#demo.example name="docs-demo-basic.hbs"}}
-      <TrixEditor
-        @trixChange={{this.trixChange}}
-        @initialValue="some text" />
+      <TrixEditor @initialValue="some text" />
     {{/demo.example}}
 
     {{demo.snippet "docs-demo-basic.hbs"}}
