@@ -6,12 +6,13 @@ import { hbs } from 'ember-cli-htmlbars';
 module('Integration | Component | trix-editor/editor', function (hooks) {
   setupRenderingTest(hooks);
 
+  hooks.beforeEach(async function () {
+    this.set('noop', () => {});
+  });
+
   test('it renders', async function (assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
+    await render(hbs`<TrixEditor::Editor @noop={{this.noop}} />`);
 
-    await render(hbs`<TrixEditor::Editor />`);
-
-    assert.dom(this.element).hasText('');
+    assert.ok(this.element);
   });
 });
