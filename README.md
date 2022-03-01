@@ -1,6 +1,9 @@
 ember-trix-next
 ==============================================================================
 
+[![CI](https://github.com/videoly/ember-trix-next/actions/workflows/ci.yml/badge.svg)](https://github.com/videoly/ember-trix-next/actions/workflows/ci.yml)
+
+
 A simple trix editor wrapper
 
 
