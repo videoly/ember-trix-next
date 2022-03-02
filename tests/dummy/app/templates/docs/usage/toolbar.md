@@ -35,7 +35,9 @@ The list of available buttons is
   {{#demo.example name="toolbar-custom.hbs"}}
     <TrixEditor as |trix|>
       <trix.toolbar @default={{false}} />
-      <trix.editor @initialValue="some text" />
+      <trix.editor
+        @trixChange={{this.handleTrixChangeEvent}}
+        @initialValue="some text" />
     </TrixEditor>
   {{/demo.example}}
   {{demo.snippet "toolbar-custom.hbs"}}
@@ -48,7 +50,9 @@ The list of available buttons is
 
     <TrixEditor as |trix|>
       <trix.toolbar @default={{false}} @buttons={{this.customButtons}} />
-      <trix.editor @initialValue="some text" />
+      <trix.editor
+        @trixChange={{this.handleTrixChangeEvent}}
+        @initialValue="some text" />
     </TrixEditor>
   {{/demo.example}}
   {{demo.snippet "toolbar-custom-buttons.hbs"}}

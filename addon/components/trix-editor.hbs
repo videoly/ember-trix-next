@@ -1,7 +1,7 @@
 {{#if (has-block)}}
   {{yield (hash
-    toolbar=(component this.toolbarComponent toolbarId=this.toolbarId)
-    editor=(component this.editorComponent
+    toolbar=(component 'trix-editor/toolbar' toolbarId=this.toolbarId)
+    editor=(component 'trix-editor/editor'
       toolbarId=this.toolbarId
       inputId=this.inputId
       noop=this.noop

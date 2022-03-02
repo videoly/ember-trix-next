@@ -29,7 +29,9 @@ Usage
 In the most cases it would be enough just to use the inline variant of the component:
 
 ```
-<TrixEditor @initialValue="some text" />
+<TrixEditor
+  @trixChange={{this.handleTrixChangeEvent}}
+  @initialValue="some text" />
 ```
 
 Or you can customize the markup:
@@ -39,7 +41,9 @@ Or you can customize the markup:
   <p>Some HTML before toolbar</p>
   <trix.toolbar />
   <p>Some HTML between toolbar and editor</p>
-  <trix.editor @initialValue="some text" />
+  <trix.editor
+    @trixChange={{this.handleTrixChangeEvent}}
+    @initialValue="some text" />
   <p>Some HTML after editor</p>
 </TrixEditor>
 ```

@@ -5,6 +5,7 @@ In the most cases it would be enough just to use the inline variant of the compo
 {{#docs-demo as |demo|}}
   {{#demo.example name="trix-simple.hbs"}}
     <TrixEditor
+      @trixChange={{this.handleTrixChangeEvent}}
       @initialValue="some text" />
   {{/demo.example}}
   {{demo.snippet "trix-simple.hbs"}}
@@ -18,7 +19,9 @@ Or you can customize the markup:
       <p>Some HTML before toolbar</p>
       <trix.toolbar />
       <p>Some HTML between toolbar and editor</p>
-      <trix.editor @initialValue="some text" />
+      <trix.editor
+        @trixChange={{this.handleTrixChangeEvent}}
+        @initialValue="some text" />
       <p>Some HTML after editor</p>
     </TrixEditor>
   {{/demo.example}}
