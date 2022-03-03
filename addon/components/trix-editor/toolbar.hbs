@@ -1,20 +1,20 @@
 {{#if this.isDefault}}
   <trix-toolbar
-    data-trix-toolbar
-    data-trix-toolbar-default
+    data-test-trix-toolbar
+    data-test-trix-toolbar-default
     id="{{@toolbarId}}"
     {{will-destroy this.teardown}}
     ...attributes />
 {{else}}
   <trix-toolbar
-    data-trix-toolbar
-    data-trix-toolbar-custom
+    data-test-trix-toolbar
+    data-test-trix-toolbar-custom
     id="{{@toolbarId}}"
     {{will-destroy this.teardown}}
     ...attributes>
     {{#each this.toolbarButtonsData as |_button|}}
       <button
-        data-trix-toolbar-button
+        data-test-trix-toolbar-button
         type="button"
         class="trix-next-button trix-next-button--{{_button.id}}"
         data-trix-attribute={{if (equal _button.type 'attribute') _button.id null}}
@@ -28,7 +28,7 @@
 
     {{yield}}
 
-    <div class="trix-dialogs" data-trix-dialogs>
+    <div class="trix-dialogs" data-test-trix-dialogs>
       <div class="trix-dialog trix-dialog--link" data-trix-dialog="href" data-trix-dialog-attribute="href">
         <div class="trix-dialog__link-fields">
           <input type="url" name="href" class="trix-input trix-input--dialog" placeholder="Enter a URL…" aria-label="URL" required="" data-trix-input="" disabled="disabled">

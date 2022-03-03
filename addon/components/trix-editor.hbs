@@ -8,9 +8,9 @@
     )
   )}}
 {{else}}
-  <input id="{{this.inputId}}" value="{{@initialValue}}" type="hidden" data-trix-input />
+  <input id="{{this.inputId}}" value="{{@initialValue}}" type="hidden" data-test-trix-input />
   <trix-editor
-    data-trix-editor
+    data-test-trix-editor
     input="{{this.inputId}}"
     {{on 'trix-initialize' (or @trixInitialize this.noop)}}
     {{on 'trix-change' (or @trixChange this.noop)}}
