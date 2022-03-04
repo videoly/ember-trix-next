@@ -23,7 +23,9 @@ module('Integration | Component | trix-editor/toolbar', function (hooks) {
   });
 
   test('it renders custom toolbar', async function (assert) {
-    await render(hbs`<TrixEditor::Toolbar @toolbarId="1" @default={{false}} />`);
+    await render(
+      hbs`<TrixEditor::Toolbar @toolbarId="1" @default={{false}} />`
+    );
 
     const $defaultToolbar = await find('[data-test-trix-toolbar-default]');
     const $customToolbar = await find('[data-test-trix-toolbar-custom]');
@@ -42,12 +44,21 @@ module('Integration | Component | trix-editor/toolbar', function (hooks) {
     `);
 
     const $customToolbar = await find('[data-test-trix-toolbar-custom]');
-    const $buttons = $customToolbar.querySelectorAll('[data-test-trix-toolbar-button]');
+    const $buttons = $customToolbar.querySelectorAll(
+      '[data-test-trix-toolbar-button]'
+    );
 
-    assert.strictEqual($buttons.length, buttons.length, 'buttons number matches');
+    assert.strictEqual(
+      $buttons.length,
+      buttons.length,
+      'buttons number matches'
+    );
 
-    buttons.forEach(button => {
-      assert.ok($customToolbar.querySelector(`[data-trix-attribute="${button}"]`), `${button} is present`);
+    buttons.forEach((button) => {
+      assert.ok(
+        $customToolbar.querySelector(`[data-trix-attribute="${button}"]`),
+        `${button} is present`
+      );
     });
   });
 });

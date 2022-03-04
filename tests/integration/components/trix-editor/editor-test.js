@@ -58,7 +58,11 @@ module('Integration | Component | trix-editor/editor', function (hooks) {
 
     this.set('selectionChangeHandler', ({ type }) => {
       console.log('trix-selection-change');
-      assert.strictEqual(type, 'trix-selection-change', 'trix-selection-change inited');
+      assert.strictEqual(
+        type,
+        'trix-selection-change',
+        'trix-selection-change inited'
+      );
     });
 
     this.set('pasteHandler', ({ type }) => {

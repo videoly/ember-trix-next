@@ -53,7 +53,11 @@ module('Integration | Component | trix-editor', function (hooks) {
     const $editor = await find('[data-test-trix-editor]');
 
     assert.ok($editor, 'trix editor rendered');
-    assert.strictEqual($editor.textContent, initialValue, 'initialValue matches');
+    assert.strictEqual(
+      $editor.textContent,
+      initialValue,
+      'initialValue matches'
+    );
   });
 
   test('block change event works', async function (assert) {
@@ -62,8 +66,16 @@ module('Integration | Component | trix-editor', function (hooks) {
     const value = 'some text';
 
     this.set('handleTrixChangeEvent', ({ type, target }) => {
-      assert.strictEqual(type, 'trix-change', 'event type equalt to trix-change');
-      assert.strictEqual(target.innerHTML, '<div><!--block-->some text</div>', 'html value is correct');
+      assert.strictEqual(
+        type,
+        'trix-change',
+        'event type equalt to trix-change'
+      );
+      assert.strictEqual(
+        target.innerHTML,
+        '<div><!--block-->some text</div>',
+        'html value is correct'
+      );
       assert.strictEqual(target.innerText, value, 'text value is correct');
     });
 
