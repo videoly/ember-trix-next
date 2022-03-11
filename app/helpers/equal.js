@@ -1,1 +1,1 @@
-export { default } from 'ember-trix-next/helpers/equal';
+export { default } from '@videoly/ember-trix-next/helpers/equal';

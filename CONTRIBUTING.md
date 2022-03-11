@@ -3,7 +3,7 @@
 ## Installation
 
 * `git clone <repository-url>`
-* `cd ember-trix-next`
+* `cd @videoly/ember-trix-next`
 * `npm install`
 
 ## Linting

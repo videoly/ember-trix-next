@@ -1,1 +1,1 @@
-export { default } from 'ember-trix-next/components/trix-editor';
+export { default } from '@videoly/ember-trix-next/components/trix-editor';

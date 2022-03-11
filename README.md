@@ -1,4 +1,4 @@
-ember-trix-next
+@videoly/ember-trix-next
 ==============================================================================
 
 [![CI](https://github.com/videoly/ember-trix-next/actions/workflows/ci.yml/badge.svg)](https://github.com/videoly/ember-trix-next/actions/workflows/ci.yml)
@@ -19,7 +19,7 @@ Installation
 ------------------------------------------------------------------------------
 
 ```
-ember install ember-trix-next
+ember install @videoly/ember-trix-next
 ```
 
 

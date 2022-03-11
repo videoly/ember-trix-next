@@ -7,7 +7,7 @@ A toolbar component accepts args below:
 * `default` - a `boolean` that specifies wheather use or not the default trix toolbar;.
 * `buttons` - `string[]` an array that specifies the buttons you need to use on the toolbar. Button name constants could be imported from the plugin
 
-`import { BUTTONS } from 'ember-trix-next';`
+`import { BUTTONS } from '@videoly/ember-trix-next';`
 
 The list of available buttons is
 
