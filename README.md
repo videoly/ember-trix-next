@@ -28,7 +28,7 @@ Usage
 
 In the most cases it would be enough just to use the inline variant of the component:
 
-```
+```hbs
 <TrixEditor
   @trixChange={{this.handleTrixChangeEvent}}
   @initialValue="some text" />
@@ -36,7 +36,7 @@ In the most cases it would be enough just to use the inline variant of the compo
 
 Or you can customize the markup:
 
-```
+```hbs
 <TrixEditor as |trix|>
   <p>Some HTML before toolbar</p>
   <trix.toolbar />
